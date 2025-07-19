@@ -33,4 +33,4 @@ content = @`
             </div>
         </div>
     </div>
-`, title = "Home - Dolphins Swim Academy")
+`)
