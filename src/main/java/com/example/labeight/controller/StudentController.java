@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/students")
 public class StudentController {
 
     @Autowired
     private StudentService studentService;
 
-    @GetMapping
+    @GetMapping("/students")
     public String students(@RequestParam(value = "session", required = false) String session, Model model) {
         List<String> availableSessions = studentService.getAvailableSessions();
         String selectedSession = session != null ? session : "Session 1: June 17 - June 27";
